@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="grt-library-toolbar">
 		<label class="grt-toolbar-field grt-toolbar-search" for="grt-template-search">
 			<span class="screen-reader-text"><?php esc_html_e( 'Search templates', 'grt-addon-for-elementor' ); ?></span>
-			<input type="search" id="grt-template-search" class="grt-input" placeholder="<?php esc_attr_e( 'Search by name or category…', 'grt-addon-for-elementor' ); ?>" />
+			<input type="search" id="grt-template-search" class="grt-input" placeholder="<?php esc_attr_e( 'Search by name or category...', 'grt-addon-for-elementor' ); ?>" />
 		</label>
 
 		<label class="grt-toolbar-field" for="grt-category-filter">

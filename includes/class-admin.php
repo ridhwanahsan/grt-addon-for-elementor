@@ -11,6 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! defined( 'GRT_ADDON_FOR_ELEMENTOR_VERSION' ) ) {
+	define( 'GRT_ADDON_FOR_ELEMENTOR_VERSION', '1.0.0' );
+}
+
+if ( ! defined( 'GRT_ADDON_FOR_ELEMENTOR_PATH' ) ) {
+	define( 'GRT_ADDON_FOR_ELEMENTOR_PATH', trailingslashit( dirname( __DIR__ ) ) );
+}
+
+if ( ! defined( 'GRT_ADDON_FOR_ELEMENTOR_URL' ) && function_exists( 'plugin_dir_url' ) ) {
+	define( 'GRT_ADDON_FOR_ELEMENTOR_URL', plugin_dir_url( dirname( __DIR__ ) . '/grt-addon-for-elementor.php' ) );
+}
+
 class Admin {
 
 	/**

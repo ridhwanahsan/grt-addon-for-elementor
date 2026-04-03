@@ -1,0 +1,80 @@
+{
+  "title": "Home 1",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "grt_category": "Business",
+  "grt_description": "Bold landing page starter with hero copy, supporting text, and a primary CTA.",
+  "grt_thumbnail": "assets/images/home-1.svg",
+  "grt_preview_url": "assets/images/home-1.svg",
+  "grt_required_plugins": [],
+  "content": [
+    {
+      "id": "a1b2c3d4",
+      "elType": "section",
+      "settings": {
+        "content_width": "boxed",
+        "background_background": "classic",
+        "background_color": "#0B1F3A",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "40",
+          "bottom": "120",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "b1c2d3e4",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "c1d2e3f4",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Build a sharper business website with Elementor",
+                "align": "center",
+                "size": "xl",
+                "header_size": "h1"
+              },
+              "elements": []
+            },
+            {
+              "id": "d1e2f3g4",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Import this starter page into your library and customize it for agencies, SaaS products, or service brands in minutes.</p>",
+                "align": "center"
+              },
+              "elements": []
+            },
+            {
+              "id": "e1f2g3h4",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Start Customizing",
+                "align": "center",
+                "size": "lg",
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

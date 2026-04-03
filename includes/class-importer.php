@@ -13,6 +13,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! defined( 'GRT_ADDON_FOR_ELEMENTOR_VERSION' ) ) {
+	define( 'GRT_ADDON_FOR_ELEMENTOR_VERSION', '1.0.0' );
+}
+
+if ( ! defined( 'GRT_ADDON_FOR_ELEMENTOR_PATH' ) ) {
+	define( 'GRT_ADDON_FOR_ELEMENTOR_PATH', trailingslashit( dirname( __DIR__ ) ) );
+}
+
+if ( ! defined( 'GRT_ADDON_FOR_ELEMENTOR_URL' ) && function_exists( 'plugin_dir_url' ) ) {
+	define( 'GRT_ADDON_FOR_ELEMENTOR_URL', plugin_dir_url( dirname( __DIR__ ) . '/grt-addon-for-elementor.php' ) );
+}
+
 class Importer {
 
 	/**
@@ -55,10 +67,12 @@ class Importer {
 		$result       = $this->import_template( $template_key, $force );
 
 		if ( is_wp_error( $result ) ) {
+			$error_data = $result->get_error_data();
+
 			wp_send_json_error(
 				[
 					'message'         => $result->get_error_message(),
-					'missing_plugins' => $result->get_error_data()['missing_plugins'] ?? [],
+					'missing_plugins' => is_array( $error_data ) ? ( $error_data['missing_plugins'] ?? [] ) : [],
 				],
 				400
 			);

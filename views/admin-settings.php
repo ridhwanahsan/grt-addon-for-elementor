@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</section>
 
-	<?php settings_errors( API::OPTION_KEY ); ?>
+	<?php settings_errors( 'grt_templates_settings' ); ?>
 
 	<div class="grt-panel-grid">
 		<article class="grt-panel">
